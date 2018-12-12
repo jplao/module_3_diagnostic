@@ -2,10 +2,11 @@
 
 <% @station_data.get_stations.each do |station| %>
   <ul class = 'station'>
-    <li> <%= station.name %> </li>
-    <li> <%= station.address %> </li>
-    <li> <%= station.fuel_type %> </li>
-    <li> <%= station.distance %> </li>
-    <li> <%= station.access_times %> </li>
+    <li> Station Name: <%= station.name %> </li>
+    <li> Address: <%= station.address %> </li>
+    <li> Fuel types: <%= station.fuel_types %> </li>
+    <li> Access Times: <%= station.access_times %> </li>
+    <li> Distance: <%= station.distance %> </li>
+
   </ul>
 <% end %>
