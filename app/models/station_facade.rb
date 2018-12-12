@@ -11,8 +11,11 @@ class StationFacade
     stations_hash.map do |station_hash|
       Station.new(station_hash)
     end
-    binding.pry
+    #sort_by_distance
+    #convert fuel types to 'electric' and 'propane'
+    
   end
+
 
   private
   def conn
