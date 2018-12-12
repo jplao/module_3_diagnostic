@@ -6,10 +6,12 @@ class StationFacade
 
   def get_stations
     response = conn.get("/api/alt-fuel-stations/v1.json")
-    stations_hash = JSON.parse(response.body)
+
+    stations_hash = JSON.parse(response.body)['fuel_stations']
     stations_hash.map do |station_hash|
       Station.new(station_hash)
     end
+    
   end
 
   private
